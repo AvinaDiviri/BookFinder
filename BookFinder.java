@@ -81,7 +81,7 @@ public class BookFinder {
 
         // print all books in genre
         try {
-            PreparedStatement statement = database.prepareStatement("SELECT * FROM BOOK WHERE GENRE = ?");
+            PreparedStatement statement = database.prepareStatement("SELECT * FROM BOOK INNER JOIN AUTHOR ON BOOK.author_id=author.id WHERE GENRE = ?");
             statement.setString(1, genre);
             // get selected genre from database
             ResultSet rs = statement.executeQuery();
@@ -89,7 +89,7 @@ public class BookFinder {
             while (rs.next()){
                 // Column
                 String  title = rs.getString("title");
-                System.out.println(String.format("Title: %s, Author: %s, Publisher: %s, Genre: %s, Rating: %s, Series: %s", rs.getString("title"), "", "",rs.getString("genre"), rs.getString("rating"),rs.getString("series") ));
+                System.out.println(String.format("Title: %s, Author: %s, Publisher: %s, Genre: %s, Rating: %s, Series: %s", rs.getString("title"), rs.getString("name"), "",rs.getString("genre"), rs.getString("rating"),rs.getString("series") ));
             }
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
