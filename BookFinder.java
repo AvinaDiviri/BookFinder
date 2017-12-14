@@ -26,7 +26,7 @@ public class BookFinder {
             // UI options
             System.out.println("1: List authors");
             System.out.println("2: List books in genre");
-            System.out.println("3: List books by author");
+            //System.out.println("3: List books by author");
             System.out.println("0: Exit");
 
             int choice = reader.nextInt();
@@ -81,7 +81,7 @@ public class BookFinder {
 
         // print all books in genre
         try {
-            PreparedStatement statement = database.prepareStatement("SELECT * FROM BOOK INNER JOIN AUTHOR ON BOOK.author_id=author.id WHERE GENRE = ?");
+            PreparedStatement statement = database.prepareStatement("SELECT BOOK.title, author.name,publisher.name, book.genre, book.rating, book.series FROM BOOK INNER JOIN AUTHOR ON BOOK.author_id=author.id INNER JOIN PUBLISHER ON BOOK.publisher_id=publisher.id WHERE GENRE = ?");
             statement.setString(1, genre);
             // get selected genre from database
             ResultSet rs = statement.executeQuery();
@@ -89,7 +89,7 @@ public class BookFinder {
             while (rs.next()){
                 // Column
                 String  title = rs.getString("title");
-                System.out.println(String.format("Title: %s, Author: %s, Publisher: %s, Genre: %s, Rating: %s, Series: %s", rs.getString("title"), rs.getString("name"), "",rs.getString("genre"), rs.getString("rating"),rs.getString("series") ));
+                System.out.println(String.format("Title: %s, Author: %s, Publisher: %s, Genre: %s, Rating: %s, Series: %s", rs.getString(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5),rs.getString(6) ));
             }
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
