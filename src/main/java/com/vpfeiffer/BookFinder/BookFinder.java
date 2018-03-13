@@ -26,7 +26,7 @@ public final class BookFinder {
     public static void main(String[] args) {
         reader = new Scanner(System.in);
 
-        // connect to SQL database
+        // Connect to SQL database.
         try {
             Class.forName("org.sqlite.JDBC");
             database = DriverManager.getConnection("jdbc:sqlite:books.db");
@@ -37,24 +37,25 @@ public final class BookFinder {
             System.exit(0);
         }
 
-        // main UI loop
+        // Main UI loop.
         while (true) {
 
-            // UI options
+            // UI options.
             System.out.println("1: List authors");
             System.out.println("2: List books in genre");
-            //System.out.println("3: List books by author");
+            // System.out.println("3: List books by author");
             System.out.println("0: Exit");
 
             int choice = reader.nextInt();
-            reader.nextLine(); //flush scanner
+            // Flush scanner.
+            reader.nextLine();
 
-            // exit program
+            // Exit program.
             if (choice == 0) {
                 break;
             }
 
-            // UI options logic
+            // UI options logic.
             switch (choice) {
                 case 1:
                     listAuthors();
@@ -73,9 +74,9 @@ public final class BookFinder {
         reader.close();
     }
 
-    //print all authors
+    // Print all authors.
     private static void listAuthors() {
-        // print all authors
+        // Print all authors.
         try {
             Statement statement = database.createStatement();
             ResultSet rs = statement.executeQuery("SELECT name FROM AUTHOR;");
@@ -92,15 +93,15 @@ public final class BookFinder {
 
     // List genre chosen by user
     private static void listByGenre() {
-        // get genre from user
+        // Get genre from user.
         System.out.println("Select a genre: Fantasy, Fiction, Nonfiction");
         String genre = reader.nextLine();
 
-        // print all books in genre
+        // Print all books in genre.
         try {
             PreparedStatement statement = database.prepareStatement("SELECT BOOK.title, author.name,publisher.name, book.genre, book.rating, book.series FROM BOOK INNER JOIN AUTHOR ON BOOK.author_id=author.id INNER JOIN PUBLISHER ON BOOK.publisher_id=publisher.id WHERE GENRE = ?");
             statement.setString(1, genre);
-            // get selected genre from database
+            // Get selected genre from database.
             ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {
@@ -115,7 +116,7 @@ public final class BookFinder {
     }
 
     private static void listByAuthor() {
-        // To do
+        // To do.
     }
 
 }
