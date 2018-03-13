@@ -6,7 +6,7 @@ import java.sql.*;
 /**
 * Domain classes used to produce command line user interface for database using JDBC.
 * <p>
-* This class contains the controller
+* This class contains the controller and UI.
 * </p>
 *
 * @since 1.0
