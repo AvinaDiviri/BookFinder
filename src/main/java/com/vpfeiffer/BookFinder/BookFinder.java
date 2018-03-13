@@ -1,4 +1,4 @@
-package com.vpfeiffer.bookfinder;
+package main.java.com.vpfeiffer.bookfinder;
 
 import java.util.Scanner;
 import java.sql.*;
@@ -14,15 +14,23 @@ import java.sql.*;
 * @version 1.0
 */
 public final class BookFinder {
-    /* For user input */
-    private static Scanner reader; // For user input.
+    /** For user input.
+     *
+     */
+    private static Scanner reader;
     private static Connection database; // For database wrapper.
 
-    /* Utility class for accessing database
+    /**
+     * Utility class for accessing database.
+     *
     */
     private BookFinder() {
     }
 
+    /**
+     * This is the main method which is the controller.
+     * @param args
+   */
     public static void main(String[] args) {
         reader = new Scanner(System.in);
 
@@ -74,7 +82,9 @@ public final class BookFinder {
         reader.close();
     }
 
-    // Print all authors.
+    /** Print all authors.
+     *
+    */
     private static void listAuthors() {
         // Print all authors.
         try {
@@ -91,7 +101,9 @@ public final class BookFinder {
         }
     }
 
-    // List genre chosen by user
+    /** List genra chosen by user.
+     *
+    */
     private static void listByGenre() {
         // Get genre from user.
         System.out.println("Select a genre: Fantasy, Fiction, Nonfiction");
@@ -115,7 +127,9 @@ public final class BookFinder {
         }
     }
 
-    /* Implement next. */
+    /**Implement next.
+     *
+    */
     private static void listByAuthor() {
         // To do.
     }
