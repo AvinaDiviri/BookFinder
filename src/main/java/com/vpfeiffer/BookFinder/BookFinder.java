@@ -20,10 +20,10 @@ public final class BookFinder {
 
     /* Utility class for accessing database
     */
-    private BookFinder(){
+    private BookFinder() { 
     }
 
-    public static void main(String[] args) {        
+    public static void main(String[] args) {
         reader = new Scanner(System.in);
 
         // connect to SQL database
