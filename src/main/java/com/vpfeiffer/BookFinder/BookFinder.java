@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.sql.*;
 
 /**
-* Domain classes used to produce command line user interface for database using JDBC.
+* Domain classes used to produce command line user interface for database.
 * <p>
 * This class contains the controller and UI.
 * </p>
@@ -13,10 +13,13 @@ import java.sql.*;
 * @author Violet Pfeiffer
 * @version 1.0
 */
-public class BookFinder {
-    static Scanner reader; //for user input
-    static Connection database; //for database wrapper
+public final class BookFinder {
+    static Scanner reader; // For user input.
+    static Connection database; // For database wrapper.
 
+    private BookFinder(){
+        // Not called.
+    }
     public static void main(String[] args) {        
         reader = new Scanner(System.in);
 
