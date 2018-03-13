@@ -14,12 +14,15 @@ import java.sql.*;
 * @version 1.0
 */
 public final class BookFinder {
-    static Scanner reader; // For user input.
-    static Connection database; // For database wrapper.
+    /* For user input */
+    private static Scanner reader; // For user input.
+    private static Connection database; // For database wrapper.
 
+    /* Utility class for accessing database
+    */
     private BookFinder(){
-        // Not called.
     }
+
     public static void main(String[] args) {        
         reader = new Scanner(System.in);
 
