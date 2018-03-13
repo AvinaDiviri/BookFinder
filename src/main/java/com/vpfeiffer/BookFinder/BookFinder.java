@@ -4,9 +4,9 @@ import java.util.Scanner;
 import java.sql.*;
 
 /**
-* Domain classes used to produce .....
+* Domain classes used to produce command line user interface for database using JDBC.
 * <p>
-* These classes contain the ......
+* This class contains the controller
 * </p>
 *
 * @since 1.0
