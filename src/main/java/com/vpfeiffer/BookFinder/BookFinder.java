@@ -1,4 +1,4 @@
-package com.vpfeiffer.BookFinder;
+package com.vpfeiffer.bookfinder;
 
 import java.util.Scanner;
 import java.sql.*;
@@ -115,6 +115,7 @@ public final class BookFinder {
         }
     }
 
+    /* Implement next. */
     private static void listByAuthor() {
         // To do.
     }
