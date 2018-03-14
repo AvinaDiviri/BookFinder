@@ -16,18 +16,53 @@ Linux
 ```
 javac -cp "/src/main/java/com/vpfeiffer/bookfinder:/lib/sqlite-jdbc-3.21.0.jar" src/main/java/com/vpfeiffer/bookfinder/BookFinder.java
 ```
-## Run:
+## To Run:
 Windows
 ```
 java -cp "./src/main/java/com/vpfeiffer/bookfinder;./lib/sqlite-jdbc-3.21.0.jar" BookFinder
 ```
 Linux
-
-To Run:
 ```
 java -cp "./src/main/java/com/vpfeiffer/bookfinder:./lib/sqlite-jdbc-3.21.0.jar" BookFinder
 ```
+# Usage
+Main menu provides two options:
+
+* List all authors
+* List books by genre
+
+---
+To list all authors type:
+```
+authors
+```
+---
+To list books by genre type:
+```
+genre
+```
+You will be prompted to choose a genre from the following:
+* Fantasy
+* Fiction
+* Nonfiction
+
+if i.e. you were to choose fantasy type:
+```
+fantasy
+```
+All the books of the specified genre will be listed. 
+
+Note: All lower cases must be used for genres.
+
 # Resources
+
+[SQLite download page](https://sqlite.org/download.html)
+
+[SQLite download and installation guide](www.sqlitetutorial.net/download-install-sqlite/)
+
+[SQLite browser](http://sqlitebrowser.org/)
+
+[Java SQL package](https://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html)
 
 # License
 Copyright (c) 2018 Violet Pfeiffer
