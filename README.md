@@ -3,6 +3,7 @@
 A Java application that acts an interface for a SQLite database of books.
 JDBC is used for the database connectivity. The data consists of real books.
 [goodreads.com](https://www.goodreads.com/) was used to gether data.
+
 The following information about several books was recorded:
 * Title
 * Author
@@ -65,8 +66,8 @@ Note: All lower cases must be used for genres.
 
 * Jar file.
 * Query for a publisher.
-* Sort by rating
-* Query for series
+* Sort by rating.
+* Query for series.
 
 # Resources
 
