@@ -1,8 +1,15 @@
 # Book Finder
 
 A Java application that acts an interface for a SQLite database of books.
-JDBC is used for the database connectivity. 
-* Jar file coming soon.
+JDBC is used for the database connectivity. The data consists of real books.
+[goodreads.com](https://www.goodreads.com/) was used to gether data.
+The following information about several books was recorded:
+* Title
+* Author
+* Publisher
+* Genre
+* Rating
+* Series
 
 # Compile and Run
 ## To Compile:
@@ -53,6 +60,13 @@ fantasy
 All the books of the specified genre will be listed. 
 
 Note: All lower cases must be used for genres.
+
+# Future Updates
+
+* Jar file.
+* Query for a publisher.
+* Sort by rating
+* Query for series
 
 # Resources
 
