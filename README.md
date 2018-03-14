@@ -56,11 +56,11 @@ You will be prompted to choose a genre from the following:
 
 if i.e. you were to choose fantasy type:
 ```
-fantasy
+Fantasy
 ```
 All the books of the specified genre will be listed. 
 
-Note: All lower cases must be used for genres.
+Note: All genres must capitalized.
 
 # Future Updates
 
