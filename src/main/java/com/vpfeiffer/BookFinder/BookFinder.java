@@ -50,7 +50,7 @@ public final class BookFinder {
         while (true) {
 
             // UI options.
-            System.out.println("Type the option you would like to select.\n")
+            System.out.println("Type the option you would like to select.\n");
             System.out.println("authors: List authors");
             System.out.println("genre: List books by genre");
             // System.out.println("3: List books by author");

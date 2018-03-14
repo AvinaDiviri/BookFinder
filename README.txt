@@ -5,15 +5,11 @@ Info:
     Sqlite for relational database.
 
 How to compile:
-javac -g BookFinder.java
+javac -cp "/src/main/java/com/vpfeiffer/bookfinder;/lib/sqlite-jdbc-3.21.0.jar" src/main/java/com/vpfeiffer/bookfinder/BookFinder.java
 
 How to run:
 Windows:
-java -classpath ".;sqlite-jdbc-3.21.0.jar" BookFinder
-
-or 
-
-java -cp ".;sqlite-jdbc-3.21.0.jar" BookFinder
+java -cp "./src/main/java/com/vpfeiffer/bookfinder;./lib/sqlite-jdbc-3.21.0.jar" BookFinder
 
 Linux:
-java -classpath ".:sqlite-jdbc-3.21.0.jar" BookFinder
+java -cp "./src/main/java/com/vpfeiffer/bookfinder:./lib/sqlite-jdbc-3.21.0.jar" BookFinder
