@@ -22,12 +22,34 @@ Windows
 java -cp "./src/main/java/com/vpfeiffer/bookfinder;./lib/sqlite-jdbc-3.21.0.jar" BookFinder
 ```
 Linux
-
-To Run:
 ```
 java -cp "./src/main/java/com/vpfeiffer/bookfinder:./lib/sqlite-jdbc-3.21.0.jar" BookFinder
 ```
+# Usage
+Main menu provides two options:
+
+* List all authors
+* List books by genre
+
+---
+To list all authors type:
+```
+authors
+```
+---
+To list books by genre type:
+```
+genre
+```
 # Resources
+
+[SQLite download page](https://sqlite.org/download.html)
+
+[SQLite download and installation guide](www.sqlitetutorial.net/download-install-sqlite/)
+
+[SQLite browser](http://sqlitebrowser.org/)
+
+[Java SQL package](https://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html)
 
 # License
 Copyright (c) 2018 Violet Pfeiffer
