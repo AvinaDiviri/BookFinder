@@ -1,6 +1,7 @@
-package main.java.com.vpfeiffer.bookfinder;
+//package main.java.com.vpfeiffer.bookfinder;
 
 import java.util.Scanner;
+import java.util.Objects;
 import java.sql.*;
 
 /**
@@ -50,28 +51,32 @@ public final class BookFinder {
 
             // UI options.
             System.out.println("1: List authors");
-            System.out.println("2: List books in genre");
+            System.out.println("2: List books by genre");
             // System.out.println("3: List books by author");
             System.out.println("0: Exit");
 
-            int choice = reader.nextInt();
+            //int choice = reader.nextInt();
+            String choice = reader.nextLine().trim();
             // Flush scanner.
-            reader.nextLine();
+            // reader.nextLine();
 
             // Exit program.
-            if (choice == 0) {
+            /*if (choice == 0) {
+                break;
+            }*/
+            if (Objects.equals(choice, new String("exit"))){
                 break;
             }
 
             // UI options logic.
             switch (choice) {
-                case 1:
+                case "authors":
                     listAuthors();
                     break;
-                case 2:
+                case "genre":
                     listByGenre();
                     break;
-                case 3:
+                case "why":
                     listByAuthor();
                     break;
                 default:
@@ -111,7 +116,13 @@ public final class BookFinder {
 
         // Print all books in genre.
         try {
-            PreparedStatement statement = database.prepareStatement("SELECT BOOK.title, author.name,publisher.name, book.genre, book.rating, book.series FROM BOOK INNER JOIN AUTHOR ON BOOK.author_id=author.id INNER JOIN PUBLISHER ON BOOK.publisher_id=publisher.id WHERE GENRE = ?");
+            PreparedStatement statement = database.prepareStatement("SELECT "
+            + "BOOK.title,"
+            + "author.name,publisher.name,"
+            + "book.genre, book.rating,"
+            + "book.series FROM BOOK INNER JOIN AUTHOR ON "
+            + "BOOK.author_id=author.id INNER JOIN PUBLISHER ON "
+            + "BOOK.publisher_id=publisher.id WHERE GENRE = ?");
             statement.setString(1, genre);
             // Get selected genre from database.
             ResultSet rs = statement.executeQuery();
@@ -119,7 +130,12 @@ public final class BookFinder {
             while (rs.next()) {
                 // Column
                 String  title = rs.getString("title");
-                System.out.println(String.format("Title: %s, Author: %s, Publisher: %s, Genre: %s, Rating: %s, Series: %s", rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
+                System.out.println(String.format("Title: %s, Author: %s, "
+                + "Publisher: %s, "
+                + "Genre: %s, Rating: %s, Series: %s",
+                rs.getString(1), rs.getString(2),
+                rs.getString(3), rs.getString(4),
+                rs.getString(5), rs.getString(6)));
             }
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
