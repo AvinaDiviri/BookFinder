@@ -1,4 +1,3 @@
-//package main.java.com.vpfeiffer.bookfinder;
 /*
 Copyright (c) 2018 Violet Pfeiffer
 
@@ -73,18 +72,12 @@ public final class BookFinder {
             System.out.println("Type the option you would like to select.\n");
             System.out.println("authors: List authors");
             System.out.println("genre: List books by genre");
-            // System.out.println("3: List books by author");
+            // System.out.println("3: List books by publisher");
             System.out.println("exit: Exit");
 
-            //int choice = reader.nextInt();
-            String choice = reader.nextLine().trim();
-            // Flush scanner.
-            // reader.nextLine();
 
-            // Exit program.
-            /*if (choice == 0) {
-                break;
-            }*/
+            String choice = reader.nextLine().trim();
+
             if (Objects.equals(choice, new String("exit"))){
                 break;
             }
