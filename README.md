@@ -2,7 +2,7 @@
 
 A Java application that acts an interface for a SQLite database of books.
 JDBC is used for the database connectivity. The data consists of real books.
-[goodreads.com](https://www.goodreads.com/) was used to gether data.
+The website [goodreads.com](https://www.goodreads.com/) was used to gather data.
 
 The following information about several books was recorded:
 * Title
