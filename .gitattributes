@@ -1,2 +1,2 @@
-# Normalize .java files to LF (in case git doesn't automatically detect it as text)
+# Normalize .java files to LF
 *.java text eol=lf
