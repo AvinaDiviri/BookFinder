@@ -68,6 +68,7 @@ Note: All genres must capitalized.
 * Query for a publisher.
 * Sort by rating.
 * Query for series.
+* Web Scraper for goodreads.
 
 # Resources
 
