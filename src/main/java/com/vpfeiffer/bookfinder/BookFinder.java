@@ -34,9 +34,6 @@ import java.sql.*;
 * @version 1.0
 */
 public final class BookFinder {
-    /** For user input.
-     *
-     */
     private static Scanner reader;
     private static Connection database; // For database wrapper.
 
@@ -101,8 +98,8 @@ public final class BookFinder {
         reader.close();
     }
 
-    /** Print all authors.
-     *
+    /** 
+     * Print all authors.
     */
     private static void listAuthors() {
         // Print all authors.
@@ -120,8 +117,8 @@ public final class BookFinder {
         }
     }
 
-    /** List genra chosen by user.
-     *
+    /** 
+     * List genra chosen by user.
     */
     private static void listByGenre() {
         // Get genre from user.
@@ -157,10 +154,10 @@ public final class BookFinder {
         }
     }
 
-    /**Implement next.
-     *
+    /**
+     * Implement next.
     */
-    private static void listByAuthor() {
+    private static void listByPublisher() {
         // To do.
     }
 
