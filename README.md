@@ -15,21 +15,13 @@ The following information about several books was recorded:
 # Compile and Run
 ## To Compile:
 
-Windows
+Windows/Linux
 ```
-javac -cp "/src/main/java/com/vpfeiffer/bookfinder;/lib/sqlite-jdbc-3.21.0.jar" src/main/java/com/vpfeiffer/bookfinder/BookFinder.java
+javac src/main/java/com/vpfeiffer/bookfinder/BookFinder.java
 ```
 
-Linux
-```
-javac -cp "/src/main/java/com/vpfeiffer/bookfinder:/lib/sqlite-jdbc-3.21.0.jar" src/main/java/com/vpfeiffer/bookfinder/BookFinder.java
-```
 ## To Run:
-Windows
-```
-java -cp "./src/main/java/com/vpfeiffer/bookfinder;./lib/sqlite-jdbc-3.21.0.jar" BookFinder
-```
-Linux
+Windows/Linux
 ```
 java -cp "./src/main/java/com/vpfeiffer/bookfinder:./lib/sqlite-jdbc-3.21.0.jar" BookFinder
 ```
