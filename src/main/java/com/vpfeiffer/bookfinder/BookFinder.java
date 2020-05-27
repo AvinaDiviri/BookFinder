@@ -87,9 +87,6 @@ public final class BookFinder {
                 case "genre":
                     listByGenre();
                     break;
-                case "why":
-                    listByAuthor();
-                    break;
                 default:
                     System.out.println("Invalid option.");
                     break;
